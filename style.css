@@ -1,5 +1,19 @@
-/* Novo Design Moderno com tema de Saúde */
+* {
+    box-sizing: border-box;
+}
 
+html {
+    font-size: 16px;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+
+
+/* Novo Design Moderno com tema de Saúde */
 body {
     margin: 0;
     font-family: "Poppins", Arial, sans-serif;
@@ -364,4 +378,117 @@ body.dark .highlight-item strong {
 body.dark .highlight-item img {
     filter: brightness(0.85) contrast(1.1);
 }
+
+/* ===== MENU MOBILE ===== */
+
+.menu-toggle {
+    display: none;
+    font-size: 26px;
+    cursor: pointer;
+    color: white;
+}
+
+@media (max-width: 768px) {
+    header {
+        padding: 15px 20px;
+    }
+
+    header nav {
+        display: none;
+        flex-direction: column;
+        gap: 12px;
+        width: 100%;
+        background: rgba(0,0,0,0.15);
+        padding: 15px;
+        border-radius: 15px;
+    }
+
+    header nav.ativo {
+        display: flex;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+}
+
+
+@media (max-width: 768px) {
+
+    .hero {
+        padding: 70px 20px;
+        text-align: center;
+    }
+
+    .hero h2 {
+        font-size: 26px;
+    }
+
+    .hero p {
+        font-size: 16px;
+    }
+
+    .cards,
+    .cards-container,
+    .info-grid,
+    .receita-grid {
+        grid-template-columns: 1fr !important;
+        display: grid;
+    }
+
+    .card,
+    .habito-card,
+    .info-box,
+    .receita-card,
+    .highlight-item {
+        width: 100%;
+    }
+
+    .highlight-item {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .highlight-item img {
+        width: 100%;
+        height: auto;
+    }
+}
+
+
+@media (max-width: 768px) {
+    form {
+        padding: 20px;
+    }
+
+    input,
+    textarea,
+    button {
+        font-size: 16px;
+    }
+
+    textarea {
+        min-height: 120px;
+    }
+}
+
+
+@media (max-width: 768px) {
+    .modo-btn {
+        bottom: 15px;
+        right: 15px;
+        padding: 10px 14px;
+        font-size: 13px;
+    }
+}
+
+
+@media (max-width: 768px) {
+    h1 { font-size: 26px; }
+    h2 { font-size: 22px; }
+    h3 { font-size: 18px; }
+    p  { font-size: 15px; line-height: 1.6; }
+}
+
+
 
