@@ -7,13 +7,90 @@ body {
     color: #2e4a3d;
 }
 
+
+/* ===== HEADER MODERNO ===== */
+
 header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+
     background: linear-gradient(120deg, #43a047, #66bb6a);
-    padding: 20px;
-    color: white;
-    text-align: center;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+    padding: 18px 30px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+
+    box-shadow: 0 6px 18px rgba(0,0,0,0.2);
+    header::after {
+    content: '';
+    width: 80%;
+    height: 3px;
+    margin-top: 5px;
+    border-radius: 3px;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.6), transparent);
 }
+
+}
+
+/* Logo */
+header .logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    font-size: 34px;
+    font-weight: 800;
+    letter-spacing: 1px;
+    color: white;
+}
+
+header .logo-icon {
+    width: 46px;
+    height: 46px;
+    border-radius: 50%;
+
+    background: rgba(255,255,255,0.25);
+    backdrop-filter: blur(6px);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 24px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.25);
+}
+
+/* Navegação */
+header nav {
+    display: flex;
+    gap: 22px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+header nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 15px;
+
+    padding: 8px 16px;
+    border-radius: 20px;
+
+    transition: background 0.3s, transform 0.2s;
+}
+
+header nav a:hover {
+    background: rgba(255,255,255,0.25);
+    transform: translateY(-2px);
+}
+
+
+
+
 
 nav {
     margin-top: 10px;
@@ -30,6 +107,50 @@ nav a {
 nav a:hover {
     opacity: 0.7;
 }
+
+
+
+
+body.dark {
+    background: #1e1e1e;
+    color: #f1f1f1;
+}
+
+
+
+/* Botão alternar modo */
+.modo-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #43a047;
+    color: white;
+    padding: 12px 16px;
+    border-radius: 25px;
+    font-size: 14px;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    z-index: 999;
+    transition: background .3s;
+}
+
+.modo-btn:hover {
+    background: #2e7d32;
+}
+
+
+.modo-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #43a047;
+    color: white;
+    padding: 12px 16px;
+    border-radius: 25px;
+    cursor: pointer;
+    z-index: 999;
+}
+
 
 .hero {
     text-align: center;
@@ -156,3 +277,91 @@ footer {
         width: 90%;
     }
 }
+
+
+/* ===== MODO ESCURO ===== */
+body.dark {
+    background: #1e1e1e;
+    color: #f1f1f1;
+}
+
+body.dark header {
+    background: linear-gradient(120deg, #1b5e20, #2e7d32);
+}
+body.dark header nav a:hover {
+    background: rgba(255,255,255,0.15);
+}
+body.dark footer {
+    background: #2e7d32;
+}
+
+body.dark .card,
+body.dark .habito-card,
+body.dark .content,
+body.dark form,
+body.dark .feedback-box {
+    background: #2c2c2c;
+    color: #f1f1f1;
+}
+
+body.dark input,
+body.dark textarea {
+    background: #3a3a3a;
+    color: white;
+    border: 1px solid #666;
+}
+
+
+/* ===== CORREÇÃO INFO-GRID / INFO-BOX NO MODO ESCURO ===== */
+
+body.dark .info-grid {
+    background: transparent;
+}
+
+body.dark .info-box {
+    background: #2c2c2c;      /* fundo escuro */
+    color: #f1f1f1;           /* texto claro */
+    box-shadow: 0 4px 12px rgba(0,0,0,0.6);
+}
+
+body.dark .info-box h3 {
+    color: #a5d6a7;           /* verde suave para títulos */
+}
+
+body.dark .info-box p {
+    color: #e0e0e0;
+}
+
+
+body.dark .info-section h2 {
+    color: #c8e6c9;
+}
+
+/* ===== CORREÇÃO HIGHLIGHT-SECTION NO MODO ESCURO ===== */
+
+body.dark .highlight-section {
+    background: #1f2a24; /* fundo verde escuro */
+}
+
+body.dark .highlight-section h2 {
+    color: #c8e6c9;
+}
+
+body.dark .highlight-item {
+    background: #2c2c2c;
+    color: #f1f1f1;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.6);
+}
+
+body.dark .highlight-item p {
+    color: #e0e0e0;
+}
+
+body.dark .highlight-item strong {
+    color: #a5d6a7;
+}
+
+body.dark .highlight-item img {
+    filter: brightness(0.85) contrast(1.1);
+}
+

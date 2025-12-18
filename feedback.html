@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback - Vida Saudável</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="images/green heart shaped chat bubble.png" type="image/png">
+
+    <style>
+        .logo {
+            font-size: 32px;
+            font-weight: 700;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            animation: fadeIn 1.5s ease;
+        }
+        .logo-icon {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: #ffffff66;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 22px;
+            color: white;
+        }
+        @keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+
+        .feedback-box {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            animation: fadeIn 1.2s ease;
+        }
+
+        .rating {
+            display: flex;
+            gap: 10px;
+            margin: 10px 0 20px;
+        }
+        .rating input { display: none; }
+        .rating label {
+            font-size: 28px;
+            cursor: pointer;
+            color: #ccc;
+        }
+        .rating input:checked ~ label,
+        .rating label:hover,
+        .rating label:hover ~ label {
+            color: #ffca28;
+        }
+
+        .info-text {
+            font-size: 15px;
+            color: #555;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+    <div id="modo-btn" class="modo-btn">🌙 Alternar modo</div>
+<body>
+
+<header>
+    <div class="logo"><div class="logo-icon">❤</div>Feedback</div>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="habitos.html">Hábitos Diários</a>
+        <a href="receitas.html">Receitas Naturais</a>
+        <a href="feedback.html">Avaliação</a>
+    </nav>
+</header>
+
+<section class="content">
+    <div class="feedback-box">
+        <h2>Queremos ouvir você 💬</h2>
+        <p class="info-text">Sua opinião nos ajuda a melhorar o conteúdo e oferecer informações de saúde cada vez mais úteis.</p>
+
+        <form id="form-contato">
+            <label>Nome completo:</label>
+            <input type="text" id="nome" placeholder="Digite seu nome" required>
+
+            <label>Email:</label>
+            <input type="email" id="email" placeholder="Digite seu email" required>
+
+            <label>Como você avalia o site?</label>
+            <div class="rating">
+                <input type="radio" name="avaliacao" id="star5" value="5"><label for="star5">★</label>
+                <input type="radio" name="avaliacao" id="star4" value="4"><label for="star4">★</label>
+                <input type="radio" name="avaliacao" id="star3" value="3"><label for="star3">★</label>
+                <input type="radio" name="avaliacao" id="star2" value="2"><label for="star2">★</label>
+                <input type="radio" name="avaliacao" id="star1" value="1"><label for="star1">★</label>
+            </div>
+
+            <label>Mensagem:</label>
+            <textarea id="mensagem" placeholder="Escreva sua opinião, sugestão ou crítica" required></textarea>
+
+            <button type="submit">Enviar Feedback</button>
+        </form>
+
+        <p id="status"></p>
+    </div>
+</section>
+
+<footer>
+    <p>© 2025 Vida Saudável — Sua opinião importa.</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

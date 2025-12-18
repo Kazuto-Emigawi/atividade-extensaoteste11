@@ -13,8 +13,21 @@
         @keyframes fadeIn { from { opacity:0;} to {opacity:1;} }
         @keyframes slideUp { from { opacity:0; transform: translateY(40px);} to { opacity:1; transform: translateY(0);} }
         .habito-card { animation: slideUp .8s ease; }
+        
+        /* Modo escuro */
+        body.dark { background:#1e1e1e; color:white; }
+        body.dark .receita-card { background:#2c2c2c; }
+        body.dark th { background:#333; }
+        body.dark td { background:#2c2c2c; }
+        .modo-btn {
+            position: fixed; bottom:20px; right:20px;
+            background:#333; color:white;
+            padding:10px 15px; border-radius:10px;
+            cursor:pointer; z-index:999;
+        }
     </style>
 </head>
+    <div class="modo-btn" onclick="document.body.classList.toggle('dark')">Alternar modo</div>
 <body>
 <header>
     <div class="logo"><div class="logo-icon">❤</div>Dicas de Saúde</div>
@@ -22,7 +35,7 @@
         <a href="index.html">Home</a>
         <a href="habitos.html">Hábitos Diários</a>
         <a href="receitas.html">Receitas Naturais</a>
-        <a href="contato.html">Contato com Governo</a>
+        <a href="feedback.html">Feedback</a>
     </nav>
 </header>
 
