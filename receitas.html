@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Receitas Naturais e Tratamentos</title>
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        .logo { font-size: 34px; font-weight: bold; display: flex; align-items: center; justify-content: center; gap: 12px; animation: fadeIn 1.5s ease; }
+        .logo-icon { width: 45px; height: 45px; border-radius: 50%; background: #ffffff55; display: flex; justify-content: center; align-items: center; font-size: 22px; color: white; }
+
+        @keyframes fadeIn { from {opacity:0;} to {opacity:1;} }
+        @keyframes slideUp { from {opacity:0; transform: translateY(40px);} to {opacity:1; transform: translateY(0);} }
+
+        .receita-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+        }
+        .receita-card {
+            background: white;
+            padding: 20px;
+            border-radius: 16px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            animation: slideUp .8s ease;
+        }
+        .receita-card img {
+            width: 100%; height: 180px;
+            object-fit: cover;
+            border-radius: 12px;
+            margin-bottom: 12px;
+        }
+
+        .categoria-titulo {
+            font-size: 30px; text-align:center; margin: 40px 0 20px;
+        }
+
+        /* Botões de filtro */
+        .filtros { text-align:center; margin-bottom: 30px; }
+        .filtros button {
+            padding: 10px 18px;
+            border:none;
+            background:#43a047;
+            color:white;
+            border-radius:8px;
+            cursor:pointer;
+            margin:5px;
+        }
+
+        .filtros button:hover { background:#2e7d32; }
+
+        .oculto { display:none; }
+
+        /* Tabela comparativa */
+        table { width:100%; border-collapse: collapse; margin-top:40px; }
+        th, td { border:1px solid #ccc; padding:12px; text-align:left; }
+        th { background:#e8f5e9; }
+
+        /* Modo escuro */
+        body.dark { background:#1e1e1e; color:white; }
+        body.dark .receita-card { background:#2c2c2c; }
+        body.dark th { background:#333; }
+        body.dark td { background:#2c2c2c; }
+        .modo-btn {
+            position: fixed; bottom:20px; right:20px;
+            background:#333; color:white;
+            padding:10px 15px; border-radius:10px;
+            cursor:pointer; z-index:999;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="logo"><div class="logo-icon">❤</div>Receitas Naturais</div>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="habitos.html">Hábitos Diários</a>
+        <a href="receitas.html">Receitas Naturais</a>
+        <a href="contato.html">Contato</a>
+    </nav>
+</header>
+
+<div class="modo-btn" onclick="document.body.classList.toggle('dark')">Alternar modo</div>
+
+<section class="content">
+    <h1 class="categoria-titulo">Receitas Naturais</h1>
+
+    <div class="filtros">
+        <button onclick="filtrar('tudo')">Mostrar tudo</button>
+        <button onclick="filtrar('ansiedade')">Ansiedade</button>
+        <button onclick="filtrar('sono')">Sono</button>
+        <button onclick="filtrar('energia')">Energia</button>
+        <button onclick="filtrar('pele')">Pele</button>
+        <button onclick="filtrar('cabelo')">Cabelo</button>
+    </div>
+
+    <div class="receita-grid">
+
+        <!-- ANSIEDADE -->
+        <div class="receita-card ansiedade">
+            <img src="img receita/cha-de-camomila-1.png">
+            <h2>Chá de Camomila</h2>
+            <p><strong>Serve para:</strong> Reduzir ansiedade e acalmar.</p>
+            <p>Ferva água e adicione flores de camomila. Tome morno.</p>
+        </div>
+        
+        <div class="receita-card ansiedade">
+            <img src="img receita/maracuja-com-mel.jpg">
+            <h2>Maracujá com Mel</h2>
+            <p><strong>Serve para:</strong> Relaxamento e tranquilidade.</p>
+        </div>
+
+        <!-- SONO -->
+        <div class="receita-card sono">
+            <img src="img receita/cha de erva.jpg">
+            <h2>Chá de Erva-Doce</h2>
+            <p><strong>Serve para:</strong> Melhorar qualidade do sono.</p>
+        </div>
+
+        <div class="receita-card sono">
+            <img src="img receita/leite com mel.jpeg">
+            <h2>Leite Morno com Mel</h2>
+            <p><strong>Serve para:</strong> Induzir relaxamento e sono.</p>
+        </div>
+
+        <!-- ENERGIA E FOCO -->
+        <div class="receita-card energia">
+            <img src="img receita/CHA-DE-GENGIBRE.jpg">
+            <h2>Chá de Gengibre</h2>
+            <p><strong>Serve para:</strong> Energia e disposição.</p>
+        </div>
+
+        <div class="receita-card energia">
+            <img src="img receita/Suco-verde-com-couve-e-maca.jpg">
+            <h2>Suco Verde</h2>
+            <p><strong>Serve para:</strong> Foco e detox.</p>
+        </div>
+
+        <!-- PELE -->
+        <div class="receita-card pele">
+            <img src="img receita/mascara-facial-caseira.jpg">
+            <h2>Máscara de Aveia</h2>
+            <p><strong>Serve para:</strong> Pele irritada e sensível.</p>
+        </div>
+
+        <div class="receita-card pele">
+            <img src="img receita/babosa-no-cabelo-.jpg">
+            <h2>Babosa (Aloe Vera)</h2>
+            <p><strong>Serve para:</strong> Hidratar e regenerar pele.</p>
+        </div>
+
+        <!-- CABELO -->
+        <div class="receita-card cabelo">
+            <img src="img receita/oleo-de-coco.jpg">
+            <h2>Óleo de Coco</h2>
+            <p><strong>Serve para:</strong> Hidratar e fortalecer fios.</p>
+        </div>
+
+        <div class="receita-card cabelo">
+            <img src="img receita/hidratacao-mel.jpg">
+            <h2>Hidratação com Mel</h2>
+            <p><strong>Serve para:</strong> Brilho e maciez.</p>
+        </div>
+
+    </div>
+
+    <!-- TABELA DE SINTOMAS X TRATAMENTOS -->
+    <h2 class="categoria-titulo">📊 Tabela Comparativa de Sintomas x Tratamentos Naturais</h2>
+
+    <table>
+        <tr><th>Sintoma</th><th>Tratamento Natural</th></tr>
+        <tr><td>Ansiedade</td><td>Chá de camomila, maracujá</td></tr>
+        <tr><td>Dificuldade para dormir</td><td>Erva-doce, leite com mel</td></tr>
+        <tr><td>Falta de energia</td><td>Gengibre, suco verde</td></tr>
+        <tr><td>Pele irritada</td><td>Aveia, babosa</td></tr>
+        <tr><td>Cabelo ressecado</td><td>Óleo de coco, mel</td></tr>
+    </table>
+
+</section>
+
+<script>
+    function filtrar(cat){
+        document.querySelectorAll('.receita-card').forEach(card=>{
+            if(cat==='tudo') card.classList.remove('oculto');
+            else card.classList.toggle('oculto', !card.classList.contains(cat));
+        });
+    }
+</script>
+
+<footer>
+    <p>© 2025 Vida Saudável</p>
+</footer>
+
+</body>
+</html>

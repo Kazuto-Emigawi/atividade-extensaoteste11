@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vida Saudável - Bem-estar para Todos</title>
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        /* Logo aprimorado */
+        .logo {
+            font-size: 34px;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            animation: fadeIn 1.5s ease;
+        }
+        .logo-icon {
+            width: 45px; height: 45px;
+            border-radius: 50%;
+            background: #ffffff55;
+            display: flex; align-items: center; justify-content: center;
+            font-size: 24px;
+            color: white;
+            backdrop-filter: blur(4px);
+        }
+
+        /* Hero sofisticado */
+        .hero {
+            background: url('https://images.unsplash.com/photo-1554284126-aa88f22d8b74?auto=format&fit=crop&w=1400&q=60') center/cover;
+            padding: 110px 25px;
+            color: white;
+            text-shadow: 0 2px 8px rgba(0,0,0,0.5);
+            animation: fadeIn 1.3s ease;
+        }
+        .hero h2 { font-size: 38px; margin-bottom: 15px; }
+        .hero p { font-size: 20px; max-width: 700px; margin: auto; }
+
+        /* Seção informativa */
+        .info-section {
+            max-width: 1000px;
+            margin: 60px auto;
+            padding: 20px;
+            animation: fadeIn 1.5s ease;
+        }
+        .info-section h2 { font-size: 30px; text-align: center; margin-bottom: 20px; }
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+            margin-top: 20px;
+        }
+        .info-box {
+            background: white;
+            padding: 25px;
+            border-radius: 15px;
+            box-shadow: 0 4px 14px rgba(0,0,0,0.1);
+            transition: transform .3s, box-shadow .3s;
+            animation: slideUp .9s ease;
+        }
+        .info-box:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+        }
+
+        .info-box h3 { margin-bottom: 10px; }
+
+        /* Destaques */
+        .highlight-section {
+            background: #e7f7ed;
+            padding: 60px 20px;
+            margin-top: 60px;
+            animation: fadeIn 1.3s ease;
+        }
+        .highlight-section h2 { text-align: center; margin-bottom: 30px; }
+        .highlight-list {
+            max-width: 850px;
+            margin: auto;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+        .highlight-item {
+            display: flex;
+            gap: 20px;
+            align-items: center;
+            background: white;
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            animation: slideUp .9s ease;
+        }
+        .highlight-item img {
+            width: 80px; height: 80px;
+            object-fit: cover;
+            border-radius: 12px;
+        }
+
+        @keyframes fadeIn { from {opacity:0;} to {opacity:1;} }
+        @keyframes slideUp { from {opacity:0; transform: translateY(40px);} to {opacity:1; transform: translateY(0);} }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="logo"><div class="logo-icon">❤</div>Vida Saudável</div>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="habitos.html">Hábitos Diários</a>
+        <a href="receitas.html">Receitas Naturais</a>
+        <a href="contato.html">Contato com Governo</a>
+    </nav>
+</header>
+
+<section class="hero">
+    <h2>Saúde é um estilo de vida</h2>
+    <p>Pequenas ações diárias transformam completamente sua energia, seu corpo e sua mente.</p>
+</section>
+
+<section class="info-section">
+    <h2>Por que cuidar da saúde é essencial?</h2>
+    <div class="info-grid">
+        <div class="info-box">
+            <h3>💚 Bem-estar físico</h3>
+            <p>Comer bem, dormir o suficiente e se movimentar regularmente fortalece o organismo e previne doenças.</p>
+        </div>
+        <div class="info-box">
+            <h3>🧠 Saúde mental</h3>
+            <p>Hábitos saudáveis reduzem estresse, aumentam a clareza mental e melhoram o humor.</p>
+        </div>
+        <div class="info-box">
+            <h3>⚖️ Simplicidade é chave</h3>
+            <p>Você não precisa de grandes mudanças, de pouco em pouco passos consistentes são os mais poderosos.</p>
+        </div>
+    </div>
+</section>
+
+<section class="highlight-section">
+    <h2>Os princípios para uma vida mais saudável</h2>
+    <div class="highlight-list">
+
+        <div class="highlight-item">
+            <img src="images/comidas naturais.jpeg" alt="Alimentação">
+            <p><strong>Escolha alimentos naturais:</strong> quanto menos industrializado, melhor o seu corpo reage.</p>
+        </div>
+
+        <div class="highlight-item">
+            <img src="images/-para-beber-agua.jpg" alt="Hidratação">
+            <p><strong>Beba mais água:</strong> hidratação adequada melhora a pele, órgões e produção de energia.</p>
+        </div>
+
+        <div class="highlight-item">
+            <img src="images/caminhada-ou-corrida-quero-vida-e-saúde.jpg" alt="Movimento">
+            <p><strong>Mova-se todos os dias:</strong> 20 minutos de caminhada já transformam o bem-estar.</p>
+        </div>
+
+        <div class="highlight-item">
+            <img src="images/dormir.jpg" alt="Sono">
+            <p><strong>Priorize o sono:</strong> dormir bem é tão importante quanto se alimentar bem.</p>
+        </div>
+
+    </div>
+</section>
+
+<footer>
+    <p>© 2025 Vida Saudável — Cuidar de você é o primeiro passo para viver melhor.</p>
+</footer>
+
+</body>
+</html>
