@@ -490,5 +490,36 @@ body.dark .highlight-item img {
     p  { font-size: 15px; line-height: 1.6; }
 }
 
+/* ===== RECEITAS — MODO ESCURO ===== */
+
+body.dark .receita-card {
+    background: #2c2c2c;
+    color: #f1f1f1;
+}
+
+body.dark .receita-card h2 {
+    color: #a5d6a7;
+}
+
+body.dark .receita-card p {
+    color: #e0e0e0;
+}
+
+body.dark table {
+    background: #1e1e1e;
+    color: #f1f1f1;
+}
+
+body.dark th {
+    background: #2e7d32;
+    color: white;
+}
+
+body.dark td {
+    background: #2c2c2c;
+    color: #f1f1f1;
+    border-color: #555;
+}
+
 
 
